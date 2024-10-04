@@ -5,13 +5,28 @@
     android:id="@+id/Fever"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:background="@color/cream2"
     android:orientation="vertical"
     tools:context=".HomePg">
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/heroimg"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="‘Ayu’ means ‘Life’,and                                        ‘Veda’ means ‘Knowledge’.                         Hence, knowledge of our life                                 is called ‘Ayurveda’."
+        android:textAlignment="viewStart"
+        android:textColor="#BC4E05"
+        android:textSize="21sp"
+        android:textStyle="bold|italic" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="30dp"
         android:orientation="horizontal">
 
         <Button
@@ -20,6 +35,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="35dp"
             android:layout_marginTop="5dp"
+            android:backgroundTint="@color/darkpeach"
+            android:shadowColor="#2C2B2B"
+            android:shadowRadius="50.56"
             android:text="Vatta"
             tools:ignore="MissingConstraints" />
 
@@ -29,6 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="5dp"
+            android:backgroundTint="@color/darkpeach"
             android:text="Pitta"
             tools:ignore="MissingConstraints" />
 
@@ -39,6 +58,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="24dp"
+            android:backgroundTint="@color/darkpeach"
             android:text="Kapha"
             tools:ignore="MissingConstraints" />
     </LinearLayout>
@@ -54,6 +74,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="70dp"
+            android:backgroundTint="@color/darkpeach"
             android:text="Remedies"
             tools:ignore="MissingConstraints" />
 
@@ -62,16 +83,55 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
+            android:backgroundTint="@color/darkpeach"
             android:text="Herbs"
             tools:ignore="MissingConstraints" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/YogaButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="98dp"
-        android:text="Yoga and Meditation"
-        tools:ignore="MissingConstraints" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="222dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/border"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Yoga and Meditation"
+            android:textAlignment="center"
+            android:textColor="#462C75"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="5dp"
+            android:text="Yoga, Meditation and Ayurveda are the three petals of the flower of life, unfolding our potential for physical, mental and spiritual growth."
+            android:textAlignment="textStart"
+            android:textColor="#BC4E05"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+
+        <Button
+            android:id="@+id/YogaButton"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="100dp"
+            android:backgroundTint="@color/darkpeach"
+            android:text="Discover"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
 
 </LinearLayout>
