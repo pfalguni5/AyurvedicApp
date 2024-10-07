@@ -21,7 +21,7 @@
         android:text="‘Ayu’ means ‘Life’,and                                        ‘Veda’ means ‘Knowledge’.                         Hence, knowledge of our                                           life  is called ‘Ayurveda’."
         android:textAlignment="viewStart"
         android:textColor="#BC4E05"
-        android:textSize="21sp"
+        android:textSize="22dp"
         android:textStyle="bold|italic" />
 
     <LinearLayout
