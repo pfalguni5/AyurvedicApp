@@ -5,6 +5,7 @@
     android:id="@+id/Fever"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cream2"
     android:orientation="vertical"
     tools:context=".AyurvedaCurePg">
 
@@ -12,18 +13,12 @@
         android:id="@+id/textView8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:text="Ayurveda Cures"
         android:textAlignment="center"
-        android:textSize="30sp"
+        android:textColor="#462C75"
+        android:textSize="40sp"
         android:textStyle="bold" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="70dp"
-        android:text="Submit" />
 
     <TextView
         android:id="@+id/textView4"
@@ -31,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="Ayurveda Cures for Vatta imbalance"
+        android:textColor="#462C75"
         android:textSize="30sp"
         tools:ignore="MissingConstraints" />
 

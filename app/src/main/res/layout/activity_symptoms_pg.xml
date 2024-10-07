@@ -5,6 +5,7 @@
     android:id="@+id/Fever"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cream2"
     android:orientation="vertical"
     tools:context=".SymptomsPg">
 
@@ -12,10 +13,11 @@
         android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:text="Symptoms"
         android:textAlignment="center"
-        android:textSize="30sp"
+        android:textColor="#462C75"
+        android:textSize="40sp"
         android:textStyle="bold" />
 
     <TextView
@@ -24,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="Information about all the symptoms related to vatta dosh"
+        android:textColor="#462C75"
         android:textSize="30sp"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="218dp" />

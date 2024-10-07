@@ -5,6 +5,7 @@
     android:id="@+id/Fever"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cream2"
     android:orientation="vertical"
     tools:context=".YogaPg">
 
@@ -12,10 +13,11 @@
         android:id="@+id/textView9"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:text="Yoga and Meditation"
         android:textAlignment="center"
-        android:textSize="30sp"
+        android:textColor="#462C75"
+        android:textSize="40sp"
         android:textStyle="bold" />
 
     <TextView
@@ -24,5 +26,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="Meditation is a mental practice that focuses on mindfulness and awareness, aiming to calm the mind and promote inner peace. In Ayurveda, meditation is used to balance the doshas, reduce stress, and enhance mental clarity."
+        android:textColor="#462C75"
         android:textSize="25sp" />
 </LinearLayout>
