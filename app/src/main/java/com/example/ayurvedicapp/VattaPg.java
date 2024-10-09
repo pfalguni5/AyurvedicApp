@@ -70,6 +70,7 @@ public class VattaPg extends AppCompatActivity {
         if (!dBhelper.isDataExists(vataSymptomData)) {
             dBhelper.addData(vataSymptomData);
         }
+        //hdfsghsshd
 
 
     }
