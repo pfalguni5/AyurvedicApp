@@ -40,6 +40,13 @@ public class DBhelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    public boolean isDataExists(String symptom) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + Table_sym + " WHERE " + Key_name + "=?", new String[]{symptom});
+        boolean exists = (cursor.getCount() > 0);
+        cursor.close();
+        return exists;
+    }
     public void addData(String Symptoms){
         SQLiteDatabase db=this.getWritableDatabase();
 

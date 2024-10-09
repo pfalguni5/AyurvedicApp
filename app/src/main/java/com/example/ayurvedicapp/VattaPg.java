@@ -51,7 +51,7 @@ public class VattaPg extends AppCompatActivity {
         });
 
         DBhelper dBhelper=new DBhelper(this);
-        dBhelper.addData("In Ayurveda, Vata is one of the three doshas, or life energies, that make up a person's constitution. Vata is associated with air and space, and is said to control movement in the body and mind. Some characteristics of people with Vata dosha include:\n" +
+        String vataSymptomData= "In Ayurveda, Vata is one of the three doshas, or life energies, that make up a person's constitution. Vata is associated with air and space, and is said to control movement in the body and mind. Some characteristics of people with Vata dosha include:\n" +
                 "\n" +
                 "Physical characteristics\n" +
                 "They may have a lean body type, dry skin and hair, and cold extremities. They may also be tall or short, and their veins and muscle tendons may be visible. \n" +
@@ -66,7 +66,11 @@ public class VattaPg extends AppCompatActivity {
                 "They may be always on the go. \n" +
                 "\n" +
                 "\n" +
-                "\n");
+                "\n";
+        if (!dBhelper.isDataExists(vataSymptomData)) {
+            dBhelper.addData(vataSymptomData);
+        }
+
 
     }
 }
