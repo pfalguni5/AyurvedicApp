@@ -28,9 +28,8 @@ public class DBhelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(" CREATE TABLE " + Table_sym +
-                "("+ Key_name + "TEXT )" );
-        SQLiteDatabase database=this.getReadableDatabase();
+        db.execSQL("CREATE TABLE " + Table_sym + "(" + Key_name + " TEXT )");
+
 
 
     }
@@ -64,6 +63,7 @@ public class DBhelper extends SQLiteOpenHelper {
             } while (cursor.moveToNext());
         }
 
+        assert cursor != null;
         cursor.close(); // Don't forget to close the cursor
         db.close(); // Close the database
         return arrSym;

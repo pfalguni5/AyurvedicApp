@@ -1,6 +1,7 @@
 package com.example.ayurvedicapp;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -32,6 +33,7 @@ public class SymptomsPg extends AppCompatActivity {
         for (Symptomodel model : arrSym) {
             symptomsList.add(model.Symptom);
         }
+        Log.d("SymptomsPg", "Symptoms list: " + symptomsList.toString());
 
         // Set the data into the ListView using an ArrayAdapter
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, symptomsList);
