@@ -17,6 +17,9 @@ public class DBhelper extends SQLiteOpenHelper {
     private static final String Table_sym="Symptoms_vata";
     private static final String Key_name="Symptoms";
 
+    private static final String Table_vathel="Health_vata";
+    private static final String Keyvat_hel="Healthvat";
+
 
 
 
@@ -29,6 +32,8 @@ public class DBhelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE " + Table_sym + "(" + Key_name + " TEXT )");
+        db.execSQL("CREATE TABLE " + Table_vathel + "(" + Keyvat_hel + " TEXT)" );
+
 
 
 
@@ -37,7 +42,9 @@ public class DBhelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + Table_sym);
+        db.execSQL("DROP TABLE IF EXISTS " + Table_vathel);
         onCreate(db);
+
     }
 
     public boolean isDataExists(String symptom) {
@@ -47,6 +54,15 @@ public class DBhelper extends SQLiteOpenHelper {
         cursor.close();
         return exists;
     }
+
+    public boolean isDataExistshelVat(String helVat) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursorhel = db.rawQuery("SELECT * FROM " + Table_vathel + " WHERE " + Keyvat_hel + "=?", new String[]{helVat});
+        boolean existshel = (cursorhel.getCount() > 0);
+        cursorhel.close();
+        return existshel;
+    }
+
     public void addData(String Symptoms){
         SQLiteDatabase db=this.getWritableDatabase();
 
@@ -56,6 +72,18 @@ public class DBhelper extends SQLiteOpenHelper {
 
         db.insert(Table_sym, null, values);
         db.close();
+
+    }
+
+    public void addDatahel(String Helvat){
+        SQLiteDatabase dbhel=this.getWritableDatabase();
+
+        ContentValues valueshel=new ContentValues();
+        valueshel.put(Keyvat_hel,Helvat);
+
+
+        dbhel.insert(Table_vathel, null, valueshel);
+        dbhel.close();
 
     }
     public ArrayList<Symptomodel> fetchdata(){
@@ -74,5 +102,22 @@ public class DBhelper extends SQLiteOpenHelper {
         cursor.close(); // Don't forget to close the cursor
         db.close(); // Close the database
         return arrSym;
+    }
+    public ArrayList<Symptomodel> fetchdatahel(){
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cursorhel = db.rawQuery("SELECT * FROM "+Table_vathel,null);
+        ArrayList<Symptomodel> arrhel=new ArrayList<>();
+        if (cursorhel != null && cursorhel.moveToFirst()) {
+            do {
+                Symptomodel model = new Symptomodel();
+                model.Health = cursorhel.getString(0); // Ensure column index is correct
+                arrhel.add(model);
+            } while (cursorhel.moveToNext());
+        }
+
+        assert cursorhel != null;
+        cursorhel.close(); // Don't forget to close the cursor
+        db.close(); // Close the database
+        return arrhel;
     }
 }
