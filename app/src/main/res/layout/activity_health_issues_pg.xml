@@ -20,14 +20,10 @@
         android:textSize="40sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="Health issues due to vatta dosha"
-        android:textColor="#462C75"
-        android:textSize="30sp"
-        tools:ignore="MissingConstraints" />
+    <ListView
+        android:id="@+id/viewHealth"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="1dp" />
 
 </LinearLayout>

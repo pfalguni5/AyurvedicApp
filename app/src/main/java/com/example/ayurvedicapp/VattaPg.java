@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 import java.util.ArrayList;
 
 public class VattaPg extends AppCompatActivity {
-    private Button Sympbutton, HealthIssbutton, AyuCurebutton;
+    Button Sympbut, HealthIssbut, AyuCurebut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +22,8 @@ public class VattaPg extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_vatta_pg);
 
-        Button Sympbutton = findViewById(R.id.SympButton);
-        Sympbutton.setOnClickListener(new View.OnClickListener() {
+        Sympbut = findViewById(R.id.SympButton);
+        Sympbut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(VattaPg.this, SymptomsPg.class);
@@ -32,8 +32,8 @@ public class VattaPg extends AppCompatActivity {
             }
         });
 
-        Button HealthIssbutton = findViewById(R.id.HealthIssuesButton);
-        HealthIssbutton.setOnClickListener(new View.OnClickListener() {
+        HealthIssbut = findViewById(R.id.HealthIssuesButton);
+        HealthIssbut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(VattaPg.this, HealthIssuesPg.class);
@@ -41,8 +41,8 @@ public class VattaPg extends AppCompatActivity {
             }
         });
 
-        Button AyuCurebutton = findViewById(R.id.AyuCureButton);
-        AyuCurebutton.setOnClickListener(new View.OnClickListener() {
+        AyuCurebut = findViewById(R.id.AyuCureButton);
+        AyuCurebut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(VattaPg.this, AyurvedaCurePg.class);
@@ -56,8 +56,11 @@ public class VattaPg extends AppCompatActivity {
         if (!dBhelper.isDataExists(vataSymptomData)) {
             dBhelper.addData(vataSymptomData);
         }
-        //hdfsghsshd
 
+        String vatHealth="This is trial data is it diplaying clearly data is added on the vata health issue";
+        if (!dBhelper.isDataExistshelVat(vatHealth)) {
+            dBhelper.addDatahel(vatHealth);
+        }
 
     }
 }
