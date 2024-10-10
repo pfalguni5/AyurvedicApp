@@ -51,22 +51,8 @@ public class VattaPg extends AppCompatActivity {
         });
 
         DBhelper dBhelper=new DBhelper(this);
-        String vataSymptomData= "In Ayurveda, Vata is one of the three doshas, or life energies, that make up a person's constitution. Vata is associated with air and space, and is said to control movement in the body and mind. Some characteristics of people with Vata dosha include:\n" +
-                "\n" +
-                "Physical characteristics\n" +
-                "They may have a lean body type, dry skin and hair, and cold extremities. They may also be tall or short, and their veins and muscle tendons may be visible. \n" +
-                "\n" +
-                "Personality\n" +
-                "They may be creative, energetic, and enthusiastic. They may also be spontaneous and sometimes spend money rashly. \n" +
-                "\n" +
-                "Health\n" +
-                "They may be sensitive to cold weather, have circulation issues, and have joint pain. \n" +
-                "\n" +
-                "Movement\n" +
-                "They may be always on the go. \n" +
-                "\n" +
-                "\n" +
-                "\n";
+        String vataSymptomData= "An element in the body which is responsible for any sort of movement is called as ‘Vata dosh’. Vata has special importance among Tridoshas.\nIn the human boy, Pitta, Kapha, tissues and wastes are handicapped for doing their activities independently. Each and every action needs the stimulation of Vata dosh. We can observe the same thing in nature. Movements of clouds, sea waves, shifting of sands, movement of tree leaves and even earthquake are all due to principle of population.\n\nVata nirukti\n“Ta” is a suffix to “Va”. “Va” word is concerned with movement (gati) and enthusiasm (gadhan) so, the movement, needed for union and separation is carried by Vata dosh.\n\nStructute of Vata dosh\nVata dosh is invisible, but can be experienced from its functions. It does not posses physical measurements like length, breadth, height but the activities of Vata can be seen. Vata can be compared with electrical energy. We cannot see the electricity but we can experience";
+
         if (!dBhelper.isDataExists(vataSymptomData)) {
             dBhelper.addData(vataSymptomData);
         }
