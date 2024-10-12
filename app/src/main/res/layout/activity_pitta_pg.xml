@@ -15,11 +15,20 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
-        android:text="TextView"
+        android:text="Pitta Dosh"
         android:textAlignment="center"
         android:textColor="#462C75"
         android:textSize="40sp"
-        android:textStyle="bold"
-        tools:text="Pitta Dosh" />
+        android:textStyle="bold"/>
+
+    <ListView
+        android:id="@+id/listpitta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="1dp"
+        android:textColor="#462C75"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:textAlignment="center"/>
 
 </LinearLayout>

@@ -22,50 +22,13 @@
         android:textSize="40sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <ListView
+        android:id="@+id/listVatta"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="In Ayurveda, Vata is one of the three doshas, or life energies, that make up a person's constitution. Vata is associated with air and space, and is said to control movement in the body and mind. Some characteristics of people with Vata dosha include:"
-        android:textColor="#462C75"
-        android:textSize="30sp"
-        tools:ignore="MissingConstraints" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/SympButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:backgroundTint="@color/darkpeach"
-            android:minWidth="32dp"
-            android:text="Symptoms"
-            tools:ignore="MissingConstraints" />
-
-        <Button
-            android:id="@+id/HealthIssuesButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:backgroundTint="@color/darkpeach"
-            android:text="Health Issues"
-            tools:ignore="MissingConstraints" />
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/AyuCureButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="25dp"
-        android:backgroundTint="@color/darkpeach"
-        android:text="Ayurveda Cures"
-        tools:ignore="MissingConstraints" />
+        android:dividerHeight="1dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:textAlignment="center" />
 
 </LinearLayout>
