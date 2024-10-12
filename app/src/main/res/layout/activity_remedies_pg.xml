@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/Fever"
@@ -20,10 +20,12 @@
         android:textSize="40sp"
         android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/FeverBtn"
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Fever" />
-</LinearLayout>
+        android:layout_marginTop="70dp"
+        android:id="@+id/RemediesRecyclerview"
+        android:paddingLeft="7dp"/>
+
+
+</RelativeLayout>
