@@ -27,12 +27,12 @@ public class KaphaPg extends AppCompatActivity {
 
         String kaphinfo="There is constant wear and tear in the body (Shiryate tat sharirm). However we experience that from childhood to death the body grows and is maintained well. Because addition of tissues by proper nourishment is also taking place along with wear and tear. Protection of all organs against wear and tear and maintaining molecular union and to provide stability, to stimulate growth is a function of Kapha dosh. Due to this anabolic activity, body is preserved from ageing.\n\n" +
                 "Kapha nirukti\nThe element, which increases due to contact with water, is called as Kapha. This explains the intimate relation of Kapha and water. Also it is clear that body growth is dependent on Kapha and water.\n\n" +
-                "Structure of Kapha dosh\nKapha dosha is one of the three fundamental energies or humors in Ayurveda, representing the earth and water elements. It is associated with structure, stability, and lubrication in the body. Kapha is responsible for maintaining body fluids, tissues, and immunity. Kapha dosha is characterized by its heavy, slow, and cold qualities. It is responsible for the body’s structure, including bones, muscles, and fat. It also governs the production of mucus, saliva, and other bodily fluids. Kapha is essential for maintaining moisture, lubrication, and immunity in the body. Balancing Kapha involves dietary changes, lifestyle modifications, and Ayurvedic therapies.\n" +
+                "Structure of Kapha dosh: \nKapha dosha is one of the three fundamental energies or humors in Ayurveda, representing the earth and water elements. It is associated with structure, stability, and lubrication in the body. Kapha is responsible for maintaining body fluids, tissues, and immunity. Kapha dosha is characterized by its heavy, slow, and cold qualities. It is responsible for the body’s structure, including bones, muscles, and fat. It also governs the production of mucus, saliva, and other bodily fluids. Kapha is essential for maintaining moisture, lubrication, and immunity in the body. Balancing Kapha involves dietary changes, lifestyle modifications, and Ayurvedic therapies.\n" +
                 "Properties of Kapha dosh:\n"+"1.Snigdha (oiliness or unctuousness) is the most important property of Kapha dosha, providing moisture and softness." +
                 "This moisture helps maintain the body, keeping it sustained and stable." +
                 "Excessive consumption of heavy, oily, and sweet foods,a sedentary lifestyle and emotional stress can contribute to an imbalance of Snigdha Kapha." +
-                "Excess Snigdha Kapha can lead to weight gain, sluggishness, and excessive mucus production.\n\n"+"Guru (heavy) property is responsible for weight gain and increases the strength of the body.\n" +
-                "2.Kapha's Brimhna (weight-promoting) function is due to its heavy nature, and foods like wheat and black gram are heavy in nature." +
+                "Excess Snigdha Kapha can lead to weight gain, sluggishness, and excessive mucus production.\n\n"+"2.Guru (heavy) property is responsible for weight gain and increases the strength of the body." +
+                "Kapha's Brimhna (weight-promoting) function is due to its heavy nature, and foods like wheat and black gram are heavy in nature." +
                 "Overconsumption of heavy, dense foods, lack of exercise, and emotional stagnation can contribute to an imbalance of Guru Kapha." +
                 "Excess Guru Kapha can lead to weight gain, sluggishness, and decreased energy levels.\n\n"+"3.Shlakshna (slimy) property helps replenish damaged or degenerated tissues." +
                 "In the nasal, oral, and respiratory passages, as well as the heart and lungs, continuous movement of air, food, water, and blood circulation creates dryness." +
@@ -72,3 +72,4 @@ public class KaphaPg extends AppCompatActivity {
         listkapha.setAdapter(adapter);
     }
 }
+
