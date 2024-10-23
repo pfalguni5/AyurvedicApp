@@ -14,4 +14,6 @@ public class RemediesItem {
     public void setName(String name) {
         this.name = name;
     }
+
+    //gayatri
 }
