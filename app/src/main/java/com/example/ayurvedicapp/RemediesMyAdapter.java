@@ -1,6 +1,7 @@
 package com.example.ayurvedicapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -28,6 +29,12 @@ public class RemediesMyAdapter extends RecyclerView.Adapter<RemediesMyViewHolder
     @Override
     public void onBindViewHolder(@NonNull RemediesMyViewHolder holder, int position) {
         holder.nameView.setText(items.get(position).getName());
+
+        holder.itemView.setOnClickListener(v -> {
+            Intent intent = new Intent(context, RemedyDetailActivity.class);
+            intent.putExtra("remedy_name", items.get(position).getName());
+            context.startActivity(intent);
+        });
     }
 
     @Override
