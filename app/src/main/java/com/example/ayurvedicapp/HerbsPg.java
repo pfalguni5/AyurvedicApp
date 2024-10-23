@@ -39,7 +39,7 @@ public class HerbsPg extends AppCompatActivity {
 
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new HerbsMyAdapter(getApplicationContext(),items));
+        recyclerView.setAdapter(new HerbsMyAdapter(this,items));
 
     }
 }

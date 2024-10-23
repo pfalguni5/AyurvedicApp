@@ -1,6 +1,7 @@
 package com.example.ayurvedicapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -29,6 +30,11 @@ public class HerbsMyAdapter extends RecyclerView.Adapter<HerbsMyViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull HerbsMyViewHolder holder, int position) {
         holder.nameView.setText(items.get(position).getName());
+        holder.itemView.setOnClickListener(v->{
+            Intent intent=new Intent(context,HerbsDetailActivity.class);
+            intent.putExtra("herbs_name",items.get(position).getName());
+            context.startActivity(intent);
+        });
         holder.imageView.setImageResource(items.get(position).getImage());
 
     }
@@ -37,5 +43,4 @@ public class HerbsMyAdapter extends RecyclerView.Adapter<HerbsMyViewHolder> {
     public int getItemCount() {
         return items.size();
     }
-    //hifk
 }

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cream2"
+    tools:context=".HerbsDetailActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/herbsNameTextView"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:textColor="#463C75"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        android:padding="16dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/herbsDescriptionTextView"
+            android:textColor="#463C75"
+            android:textSize="18sp"
+            android:padding="16dp">
+
+        </TextView>
+
+    </ScrollView>
+</LinearLayout>
