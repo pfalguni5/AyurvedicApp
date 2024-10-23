@@ -1,6 +1,11 @@
 package com.example.ayurvedicapp;
 
+import android.graphics.Typeface;
+import android.graphics.text.LineBreaker;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.StyleSpan;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -17,7 +22,7 @@ public class YogaPg extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_yoga_pg);
 
-        TextView textView10 = findViewById(R.id.textView10);
+        TextView yogaInfoTextView = findViewById(R.id.textView10);
         String yogaInfo = "Chakras in Yoga refer to the seven major energy centers in the human body, aligned along the spine. "
                 + "These chakras are believed to influence physical, emotional, and spiritual well-being. "
                 + "In both yoga and Ayurveda, chakras represent key energy centers that influence our physical, mental, and spiritual well-being. "
@@ -40,9 +45,18 @@ public class YogaPg extends AppCompatActivity {
                 + "By calming the mind and reducing stress, it helps balance the doshas (Vata, Pitta, Kapha), thereby enhancing overall well-being. "
                 + "Regular meditation encourages self-awareness and mindfulness, aiding in better lifestyle choices and dietary habits. "
                 + "It supports digestive health by reducing anxiety, which can lead to improved digestion (agni). "
-                + "Ultimately, meditation fosters a harmonious connection between the mind, body, and spirit, helping to maintain a balanced and healthy life.";
+                + "Ultimately, meditation fosters a harmonious connection between the mind, body, and spirit, helping to maintain a balanced and healthy life.\n\n\n";
+        SpannableString spannableContent= new SpannableString(yogaInfo);
+        String[] boldTexts={"There are Seven main Chakras:","1. Muladhara (Root Chakra):","2. Svadhisthana (Sacral Chakra):","3. Manipura (Solar Plexus Chakra):","4. Anahata (Heart Chakra):","5. Vishuddha (Throat Chakra):","6. Ajna (Third Eye Chakra):","7. Sahasrara (Crown Chakra):","Meditation:"};
+        for(String boldText:boldTexts){
+            int start=yogaInfo.indexOf(boldText);
+            if(start>=0){
+                spannableContent.setSpan(new StyleSpan(Typeface.BOLD),start,start+boldText.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 
-        textView10.setText(yogaInfo);
+            }
+        }
 
+        yogaInfoTextView.setText(spannableContent);
+        yogaInfoTextView.setJustificationMode(LineBreaker.JUSTIFICATION_MODE_INTER_WORD);
     }
 }

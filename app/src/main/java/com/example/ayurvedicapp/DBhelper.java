@@ -48,7 +48,6 @@ public class DBhelper extends SQLiteOpenHelper {
         onCreate(db);
 
     }
-
     public boolean isDataExistvatinfo(String Vatinfo) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursorinfo = db.rawQuery("SELECT * FROM " + Table_vatainfo + " WHERE " + Key_info + "=?", new String[]{Vatinfo});

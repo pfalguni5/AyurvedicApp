@@ -1,9 +1,15 @@
 package com.example.ayurvedicapp;
 
 import android.annotation.SuppressLint;
+import android.graphics.Typeface;
+import android.graphics.text.LineBreaker;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.StyleSpan;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,9 +30,7 @@ public class PittaPg extends AppCompatActivity {
 
         DBhelper dBhelper=new DBhelper(this);
 
-        ListView listViewpitta;
-        listViewpitta=findViewById(R.id.listpitta);
-        ArrayList<String> pittainfo = new ArrayList<>();
+        TextView pittaInfoTextView=findViewById(R.id.pittaInfoTextView);
 
         String pitainfo="After consuming food, water etc from the universe, it should transform into useful form, with the help of metabolic activity. This transformation, digestion and metabolism is done by Pitta dosh.\n" +
                 "\n" +
@@ -48,12 +52,12 @@ public class PittaPg extends AppCompatActivity {
                 "Stress, lack of exercise, and a sedentary lifestyle can further increase heat in the body.\n\n" +
                 "4.Visra-gandha (unpleasant smell) is a natural characteristic of Pitta, and each person has a distinct odor.\n" +
                 "Imbalances in Pitta can lead to an unpleasant body odor, which can be worsened by poor hygiene and consuming too much pungent, salty, or sour foods.\n\n" +
-                "Physical Symptoms\n" +
+                "Physical Symptoms:\n" +
                 "1. Skin Issues: Pitta’s fiery nature often leads to skin problems such as acne, rashes, hives, and redness. Individuals with a dominant Pitta dosha may also experience skin sensitivity and inflammation, making them prone to conditions like dermatitis.\n" +
                 "2. Digestive Problems: The intense nature of Pitta can result in increased acidity, heartburn, acid reflux, or even diarrhea. These discomforts arise from an excess of stomach acid, leading to a burning sensation in the digestive tract.\n" +
                 "3. Inflammation: Inflammatory conditions are common with Pitta imbalances. Joint inflammation can cause discomfort and pain, while eye inflammation, such as conjunctivitis, may lead to red or irritated eyes and heightened sensitivity to light.\n" +
                 "4. Excessive Sweating: Profuse sweating is a hallmark of Pitta imbalance, particularly in areas like the armpits, hands, and feet. This overactive sweat response can be particularly distressing in warm weather or stressful situations.\n" +
-                "5. Sensitive Digestive Tract: Pitta imbalances can make the digestive system highly sensitive. Eating spicy or heavy foods may result in discomfort, indigestion, and a feeling of bloating or fullness.\n\n"+ "Emotional and Mental Symptoms\n" +
+                "5. Sensitive Digestive Tract: Pitta imbalances can make the digestive system highly sensitive. Eating spicy or heavy foods may result in discomfort, indigestion, and a feeling of bloating or fullness.\n\n"+ "Emotional and Mental Symptoms:\n" +
                 "1. Irritability: Pitta imbalances often cause heightened irritability. Individuals may find themselves easily provoked, impatient, and short-tempered, even in situations that wouldn’t typically trigger such reactions.\n" +
                 "2. Anger: The fire of Pitta can lead to frequent or intense bouts of anger and frustration. Individuals may struggle to manage their temper and may react more strongly to perceived stressors.\n" +
                 "3. Competitiveness: The competitive spirit of Pitta can become excessive when imbalanced. This drive for competition and perfectionism can lead to heightened stress and a constant need to outperform others and oneself.\n" +
@@ -69,17 +73,23 @@ public class PittaPg extends AppCompatActivity {
                 "4. Engage in cooling and moderate forms of exercise like swimming, walking, or yoga. Avoid overly intense workouts, which can increase Pitta's heat.\n" +
                 "5. Gentle yoga with a focus on forward bends, twists, and seated poses can help cool down Pitta. Avoid hot or power yoga, which can increase Pitta’s heat."+"\n"+"\n";
 
-        if (!dBhelper.isDataExistpittainfo(pitainfo)) {
-            dBhelper.addDatapittainfo(pitainfo);
+        SpannableString spannableContent=new SpannableString(pitainfo);
+
+        String[] boldTexts={"Pitta nirukti","Structure of Pitta dosh:","Properties of Pitta dosh:","Physical Symptoms:","Emotional and Mental Symptoms:","Effects of Prolonged Imbalance","Pitta Cures:"};
+        for(String boldText: boldTexts){
+            int start=pitainfo.indexOf(boldText);
+            if(start>=0){
+                spannableContent.setSpan(new StyleSpan(Typeface.BOLD),start,start+boldText.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            }
         }
 
-        ArrayList<Symptomodel> arrpitta = dBhelper.fetchdatpittainfo();
+        pittaInfoTextView.setText(spannableContent);
+        pittaInfoTextView.setJustificationMode(LineBreaker.JUSTIFICATION_MODE_INTER_WORD);
 
-        for (Symptomodel model : arrpitta) {
-            pittainfo.add(model.Pitta);
+        ArrayList<Symptomodel> arrpitta=dBhelper.fetchdatpittainfo();
+        for(Symptomodel model:arrpitta){
+            spannableContent=new SpannableString(model.Pitta);
+            pittaInfoTextView.append("\n\n"+spannableContent);
         }
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,R.layout.textcolor,R.id.textViewItem,pittainfo);
-        listViewpitta.setAdapter(adapter);
     }
 }
