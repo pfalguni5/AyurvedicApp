@@ -22,12 +22,31 @@
         android:textStyle="bold"
         tools:text="Kapha Dosh" />
 
-    <ListView
-        android:id="@+id/listKapha"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:dividerHeight="1dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="5dp"
-        android:textAlignment="center" />
+        android:fillViewport="true">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:id="@+id/cardViewKapha"
+            app:cardCornerRadius="8dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/kaphaInfoTextView"
+                android:padding="16dp"
+                android:gravity="start|center_vertical"
+                android:lineSpacingExtra="4dp"
+                android:textAlignment="viewStart"
+                android:textColor="#462c75"
+                android:textSize="16sp"
+                android:justificationMode="inter_word"
+                android:textIsSelectable="false"/>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
 </LinearLayout>
