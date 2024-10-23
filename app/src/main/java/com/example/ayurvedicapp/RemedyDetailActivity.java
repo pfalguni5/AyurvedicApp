@@ -243,7 +243,7 @@ public class RemedyDetailActivity extends AppCompatActivity {
                         "1. Apply fresh Aloe Vera gel directly to the affected skin for relief from pain and redness.\n" +
                         "2. Gently apply pure coconut oil to the sunburned areas for relief and skin hydration.\n" +
                         "3. Mix sandalwood powder with rose water or plain water to form a paste and apply it to the affected areas.\n" +
-                        "4. Place cucumber slices on the sunburned areas or apply cucumber juice for instant cooling.\n" +
+                        "4. Place cucumber slices on the sunburned areas or apply cucumber juice for instant cooling.\n";
 
 
             // Add cases for other remedies
