@@ -244,7 +244,6 @@ public class RemedyDetailActivity extends AppCompatActivity {
                         "2. Gently apply pure coconut oil to the sunburned areas for relief and skin hydration.\n" +
                         "3. Mix sandalwood powder with rose water or plain water to form a paste and apply it to the affected areas.\n" +
                         "4. Place cucumber slices on the sunburned areas or apply cucumber juice for instant cooling.\n" +
-                        "5. Mix turmeric powder with milk and apply it to the sunburned skin to reduce inflammation and pain.\n\n";
 
 
             // Add cases for other remedies
