@@ -72,7 +72,7 @@ public class HerbsDetailActivity extends AppCompatActivity {
                         "Benefits:"+"\n"+"Aloe Vera is a powerful skin soother and healer, helping with burns, wounds, and irritation. It also supports digestion, acts as a mild laxative, and helps detoxify the body. Additionally, it boosts immunity and enhances the body's natural healing process.\n\n" +
                         "Uses:"+"\n"+"Aloe Vera gel is commonly applied topically for skin issues, while the juice is consumed for digestive health and detoxification.";
 
-            case "SandelWood":
+            case "Sandalwood":
                 return  "Sandalwood (Chandan)\n" +
                         "Ayurvedic properties:"+"\n"+"Sandalwood is cooling in nature and balances Pitta dosha. It has a sweet, bitter taste and is known for its calming and soothing effects on the mind and body.\n\n" +
                         "Benefits:"+"\n"+"Sandalwood is renowned for promoting mental clarity, reducing stress, and enhancing skin complexion. It is widely used for its anti-inflammatory, antiseptic, and anti-aging properties.\n\n" +

@@ -5,7 +5,7 @@
     android:id="@+id/Fever"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cream2"
+    android:background="#FDF2DB"
     android:orientation="vertical"
     tools:context=".PittaPg">
 
@@ -31,6 +31,7 @@
            android:layout_height="wrap_content"
            android:id="@+id/cardViewPitta"
            android:layout_margin="16dp"
+           app:cardBackgroundColor="#FDF2DB"
            app:cardCornerRadius="8dp"
            android:elevation="4dp">
            <TextView
